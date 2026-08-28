@@ -46,6 +46,60 @@
                 <td>Free</td>
             </tr>
         </table>
+
+                <h2>Suggest a Place</h2>
+        <form>
+            <p>
+                <label for="place-name">Place Name:</label>
+                <input type="text" id="place-name" name="place-name" placeholder="e.g. Hidden Falls" required>
+            </p>
+
+            <fieldset>
+                 <legend>Category</legend>
+
+                <input type="radio" id="category-food" name="category" value="food">
+                <label for="category-food">Food</label><br>
+
+                <input type="radio" id="category-study" name="category" value="study-spot">
+                <label for="category-study">Study Spot</label><br>
+
+                <input type="radio" id="category-outdoors" name="category" value="outdoors">
+                <label for="category-outdoors">Outdoors</label><br>
+
+                <input type="radio" id="category-nature" name="category" value="nature">
+                <label for="category-nature">Nature</label><br>
+
+                <input type="radio" id="category-cityscape" name="category" value="cityscape">
+                <label for="category-cityscape">Cityscape</label>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>What's Good About It</legend>
+
+                <input type="checkbox" id="good-affordable" name="good-points" value="affordable">
+                <label for="good-affordable">Affordable</label><br>
+
+                <input type="checkbox" id="good-wifi" name="good-points" value="good-wifi">
+                <label for="good-wifi">Good Wifi</label><br>
+
+                <input type="checkbox" id="good-quiet" name="good-points" value="quiet">
+                <label for="good-quiet">Quiet</label><br>
+
+                <input type="checkbox" id="good-scenery" name="good-points" value="scenery">
+                <label for="good-scenery">Scenery</label><br>
+
+                <input type="checkbox" id="good-metropolitan" name="good-points" value="metropolitan-view">
+                <label for="good-metropolitan">Metropolitan View</label>
+            </fieldset>
+
+            <p>
+                <label for="email">Contact Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email.." required>
+            </p>
+
+            <button type="submit">Submit Suggestion</button>
+        </form>
     </main>
 
     <footer>
