@@ -1,0 +1,268 @@
+/* =========================================
+   Variables - Forest & Earth palette
+   ========================================= */
+:root {
+    --brand-color: #2f4f2f;   /* deep forest green */
+    --ink: #2b2b22;           /* near-black earthy brown for text */
+    --muted: #5c5a4a;         /* muted olive-taupe (contrast-checked) */
+    --bg-light: #f2f0e6;      /* soft ivory/parchment background */
+    --accent: #c2a14d;        /* warm gold, sunlight through trees (decorative only) */
+    --card-bg: #fbfaf5;       /* near-white card background */
+}
+
+/* =========================================
+   Base styles
+   ========================================= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--ink);
+    background-color: var(--bg-light);
+}
+
+h1, h2, h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: var(--brand-color);
+    letter-spacing: 0.3px;
+}
+
+a {
+    color: var(--brand-color);
+}
+
+/* =========================================
+   Layout regions
+   ========================================= */
+header {
+    background-color: var(--brand-color);
+    color: #fff;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    border-bottom: 4px solid var(--accent);
+}
+
+header h1 {
+    color: #fff;
+    margin: 0 0 0.25rem 0;
+    font-size: 2rem;
+}
+
+header p {
+    margin: 0;
+    color: #fff;
+    font-size: 0.95rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+nav a:hover {
+    border-bottom: 2px solid var(--accent);
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+footer {
+    background-color: var(--ink);
+    color: var(--bg-light);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+/* =========================================
+   Components
+   ========================================= */
+
+/* Place cards - reusable class */
+.place-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 24px;
+    border-left: 6px solid var(--brand-color);
+    margin-bottom: 2rem;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(43, 43, 34, 0.12);
+}
+
+.place-card h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    color: var(--brand-color);
+}
+
+.place-card p {
+    color: var(--ink);
+}
+
+/* uniform, centered images everywhere */
+img {
+    display: block;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid var(--accent);
+}
+
+/* View details / links styled as buttons */
+.place-card a,
+main > a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1.25rem;
+    background-color: var(--brand-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.place-card a:hover,
+main > a:hover {
+    background-color: var(--ink);
+}
+
+/* Info tables on place detail pages */
+table {
+    width: 100%;
+    max-width: 500px;
+    margin: 1.5rem auto;
+    border-collapse: collapse;
+    background-color: var(--card-bg);
+}
+
+table th, table td {
+    border: 1px solid var(--muted);
+    padding: 0.75rem;
+    text-align: left;
+    color: var(--ink);
+}
+
+table th {
+    background-color: var(--accent);
+    width: 35%;
+}
+
+/* Forms (contact form) */
+form {
+    max-width: 500px;
+    margin: 1.5rem auto;
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid var(--muted);
+}
+
+fieldset {
+    border: 1px solid var(--muted);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    padding: 16px;
+}
+
+legend {
+    color: var(--brand-color);
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+label {
+    display: block;
+    margin-top: 0.75rem;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+    color: var(--ink);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--muted);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: #fff;
+    color: var(--ink);
+}
+
+input[type="submit"],
+button[type="submit"] {
+    margin-top: 1rem;
+    padding: 0.6rem 1.5rem;
+    background-color: var(--brand-color);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+    background-color: var(--ink);
+}
+
+/* Visible focus state for keyboard users - never remove without replacing */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: 3px solid var(--brand-color);
+    outline-offset: 2px;
+}
+/* Radio & checkbox labels should sit inline next to their input, not stack */
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    display: inline;
+    font-weight: normal;
+    margin: 0;
+    color: var(--ink);
+}
